@@ -1,0 +1,158 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<title></title>
+		<meta content="Microsoft Visual Studio .NET 7.1" name="GENERATOR">
+		<meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
+		<script language="javascript" id="clientEventHandlersJS">
+<!--
+
+var id
+var ventanaGanar
+var adivinar = new String()
+var pp = new String()
+var cc = new Array()
+var aciertos =0
+function mira(letra) {
+//alert (letra)
+var errores = document.getElementById("errores")
+
+
+var sw=0
+for(var i=0;i<adivinar.length ;i++)
+{
+if(adivinar.charAt(i) == letra & cc[i]=="-")
+{
+aciertos=aciertos+1;
+cc[i]=letra;
+sw=1;
+}
+//else {errores.value =errores.value + letra}
+}
+if(sw==0){errores.value =errores.value + letra}
+var cadena =""
+for(var i=0;i<adivinar.length ;i++)
+{cadena = cadena +cc[i]}
+pp =document.getElementById("palabra")
+pp.value=cadena
+var letra = document.getElementById("letra")
+letra.value =""
+faciertos()
+}
+function rayas(palabra)
+{
+adivinar=palabra
+
+pp =document.getElementById("palabra")
+pp.value=""
+for(var i=0;i<adivinar.length ;i++)
+{
+pp.value=pp.value + "-"
+cc[i]="-"
+}
+
+var letra = document.getElementById("letra")
+letra.focus() 
+
+ 
+}
+function faciertos()
+{
+var nr = errores.value
+var nnr = nr.length;
+
+if(nnr>10)
+{
+aciertos=0
+ventanaGanar=window.open("perder.htm","perder"," toolbar=no,width=400,height=390,left=300,top=200")
+id=window.setInterval("cerrarv()",5000)
+}
+if(aciertos>=adivinar.length ) {
+aciertos=0
+ventanaGanar=window.open("ganar.htm","ganar"," toolbar=no,width=400,height=390,left=300,top=200")
+id=window.setInterval("cerrarv()",5000)
+//document.location.href="ganar.htm"
+//document.write("Acertaste")
+//document.write("<bgsound src='C:\\ahorcado\\applet2006\\ganar.WAV' loop='1'>")
+}
+
+}
+function cerrarv()
+{
+window.clearInterval(id)
+ventanaGanar.close()
+document.location.reload()
+
+}
+//-->
+
+function nombreImagen(nombre)
+{
+//45
+var s = new String()
+s=nombre
+var nn=s.length-49
+adivinar=s.substr(45,nn )
+rayas(adivinar)
+}
+		</script>
+	</head>
+	<body bgColor="honeydew">
+		<P><IMG style="LEFT: 81px; WIDTH: 84px; POSITION: absolute; TOP: 1px; HEIGHT: 80px" onclick="nombreImagen(this.src)"
+				height="80" alt="" src="imagenes\rueda.gif" width="84"> <IMG style="LEFT: 166px; WIDTH: 84px; POSITION: absolute; TOP: 0px; HEIGHT: 80px" onclick="nombreImagen(this.src)"
+				height="80" alt="" src="imagenes\perro.gif" width="84"></P>
+		<DIV style="LEFT: 1px; WIDTH: 80px; POSITION: absolute; TOP: 1px; HEIGHT: 80px" ms_positioning="FlowLayout"><IMG style="WIDTH: 78px; HEIGHT: 80px" onclick="nombreImagen(this.src)" height="80" alt=""
+				src="imagenes\coche.gif" width="78"></DIV>
+		<P><IMG style="LEFT: 251px; WIDTH: 84px; POSITION: absolute; TOP: 0px; HEIGHT: 80px" onclick="nombreImagen(this.src)"
+				height="80" alt="" src="imagenes\gallina.gif" width="84"></P>
+		<P>&nbsp; <IMG style="LEFT: 336px; WIDTH: 84px; POSITION: absolute; TOP: 0px; HEIGHT: 80px" onclick="nombreImagen(this.src)"
+				height="80" alt="" src="imagenes\gabriel.gif" width="84"> <IMG style="LEFT: 421px; WIDTH: 84px; POSITION: absolute; TOP: 0px; HEIGHT: 80px" onclick="nombreImagen(this.src)"
+				height="80" alt="" src="imagenes\camion.gif" width="84"> <IMG style="LEFT: 506px; WIDTH: 84px; POSITION: absolute; TOP: 0px; HEIGHT: 80px" onclick="nombreImagen(this.src)"
+				height="80" alt="" src="imagenes\mapa.gif" width="84"></P>
+		<P><IMG style="LEFT: 591px; WIDTH: 84px; POSITION: absolute; TOP: 0px; HEIGHT: 80px" onclick="nombreImagen(this.src)"
+				height="80" alt="" src="imagenes\racimo.gif" width="84"> <IMG style="LEFT: 1px; WIDTH: 80px; POSITION: absolute; TOP: 82px; HEIGHT: 80px" onclick="nombreImagen(this.src)"
+				height="80" alt="" src="imagenes\flor.gif" width="80"></P>
+		<P>&nbsp;</P>
+		<IMG style="LEFT: 676px; WIDTH: 84px; POSITION: absolute; TOP: 0px; HEIGHT: 80px" onclick="nombreImagen(this.src)"
+			height="80" alt="" src="imagenes\tierra.gif" width="84">
+		<P></P>
+		<P><IMG id="IMG1" style="LEFT: 1px; WIDTH: 80px; POSITION: absolute; TOP: 163px; HEIGHT: 80px"
+				onclick="nombreImagen(this.src)" height="80" alt="" src="imagenes\gato.gif" width="80">
+			<IMG style="LEFT: 0px; WIDTH: 80px; POSITION: absolute; TOP: 244px; HEIGHT: 80px" onclick="nombreImagen(this.src)"
+				height="80" alt="" src="imagenes\PALOMA.gif" width="80"> <IMG style="LEFT: 1px; WIDTH: 80px; POSITION: absolute; TOP: 325px; HEIGHT: 80px" onclick="nombreImagen(this.src)"
+				height="80" alt="" src="imagenes\arbol.gif" width="80"> <IMG style="LEFT: 1px; WIDTH: 80px; POSITION: absolute; TOP: 406px; HEIGHT: 80px" onclick="nombreImagen(this.src)"
+				height="80" alt="" src="imagenes\ordenador.gif" width="80"> <IMG style="LEFT: 1px; WIDTH: 88px; POSITION: absolute; TOP: 487px; HEIGHT: 80px" onclick="nombreImagen(this.src)"
+				height="80" alt="" src="imagenes\maestro.gif" width="88"></P>
+		<P><IMG style="LEFT: 761px; WIDTH: 84px; POSITION: absolute; TOP: 0px; HEIGHT: 80px" onclick="nombreImagen(this.src)"
+				height="80" alt="" src="imagenes\nube.gif" width="84"></P>
+		<IMG style="LEFT: 846px; WIDTH: 84px; POSITION: absolute; TOP: 0px; HEIGHT: 80px" onclick="nombreImagen(this.src)"
+			height="80" alt="" src="imagenes\television.gif" width="84"> <IMG style="LEFT: 931px; WIDTH: 84px; POSITION: absolute; TOP: 0px; HEIGHT: 80px" onclick="nombreImagen(this.src)"
+			height="80" alt="" src="imagenes\AGUILA.jpg" width="84">
+		<P></P>
+		<P>&nbsp;</P>
+		<center>
+			<P><INPUT id="palabra" onblur="rayas(this.value)" style="FONT-SIZE: 24pt; WIDTH: 300px; COLOR: lime; FONT-FAMILY: Verdana; HEIGHT: 40px"
+					type="text" size="44" name="Password1">
+			<P><INPUT language="javascript" id="letra" onkeyup="mira(this.value)" style="FONT-SIZE: 24pt; WIDTH: 28px; COLOR: maroon; HEIGHT: 38px"
+					type="text" maxLength="1" size="1" name="Text1">
+			<P><IMG style="LEFT: 84px; WIDTH: 88px; POSITION: absolute; TOP: 485px; HEIGHT: 80px" onclick="nombreImagen(this.src)"
+					height="80" alt="" src="imagenes\hipopotamo.jpg" width="88"><IMG id="IMG2" style="LEFT: 166px; WIDTH: 80px; POSITION: absolute; TOP: 485px; HEIGHT: 80px"
+					onclick="nombreImagen(this.src)" height="80" alt="" src="imagenes\caballo.jpg" width="80"><IMG style="LEFT: 248px; WIDTH: 88px; POSITION: absolute; TOP: 485px; HEIGHT: 80px" onclick="nombreImagen(this.src)"
+					height="80" alt="" src="imagenes\leon.jpg" width="88"><IMG style="LEFT: 415px; WIDTH: 88px; POSITION: absolute; TOP: 485px; HEIGHT: 80px" onclick="nombreImagen(this.src)"
+					height="80" alt="" src="imagenes\mariposa.jpg" width="88"><IMG style="LEFT: 499px; WIDTH: 88px; POSITION: absolute; TOP: 485px; HEIGHT: 80px" onclick="nombreImagen(this.src)"
+					height="80" alt="" src="imagenes\jirafa.jpg" width="88"><IMG style="LEFT: 585px; WIDTH: 88px; POSITION: absolute; TOP: 485px; HEIGHT: 80px" onclick="nombreImagen(this.src)"
+					height="80" alt="" src="imagenes\pavoreal.jpg" width="88"><INPUT id="errores" style="FONT-WEIGHT: bold; FONT-SIZE: 16pt; WIDTH: 441px; FONT-FAMILY: 'Comic Sans MS'; HEIGHT: 32px"
+					type="text" size="68" name="Text2"><IMG style="LEFT: 750px; WIDTH: 96px; POSITION: absolute; TOP: 485px; HEIGHT: 80px" onclick="nombreImagen(this.src)"
+					height="80" alt="" src="imagenes\elefante.jpg" width="96"><IMG style="LEFT: 668px; WIDTH: 88px; POSITION: absolute; TOP: 485px; HEIGHT: 80px" onclick="nombreImagen(this.src)"
+					height="80" alt="" src="imagenes\tigre.jpg" width="88"><IMG style="LEFT: 330px; WIDTH: 88px; POSITION: absolute; TOP: 485px; HEIGHT: 80px" onclick="nombreImagen(this.src)"
+					height="80" alt="" src="imagenes\delfin.jpg" width="88"><IMG style="LEFT: 841px; WIDTH: 88px; POSITION: absolute; TOP: 485px; HEIGHT: 80px" onclick="nombreImagen(this.src)"
+					height="80" alt="" src="imagenes\ballena.jpg" width="88"><IMG style="LEFT: 926px; WIDTH: 88px; POSITION: absolute; TOP: 485px; HEIGHT: 80px" onclick="nombreImagen(this.src)"
+					height="80" alt="" src="imagenes\cebra.jpg" width="88"><IMG style="LEFT: 926px; WIDTH: 92px; POSITION: absolute; TOP: 406px; HEIGHT: 80px" onclick="nombreImagen(this.src)"
+					height="80" alt="" src="imagenes\caracol.jpg" width="92"><IMG style="LEFT: 926px; WIDTH: 92px; POSITION: absolute; TOP: 324px; HEIGHT: 80px" onclick="nombreImagen(this.src)"
+					height="80" alt="" src="imagenes\conejo.jpg" width="92"><IMG style="LEFT: 926px; POSITION: absolute; TOP: 243px" onclick="nombreImagen(this.src)"
+					height="80" alt="" src="imagenes\mono.jpg" width="92"><IMG style="LEFT: 926px; POSITION: absolute; TOP: 162px" onclick="nombreImagen(this.src)"
+					height="80" alt="" src="imagenes\vaca.jpg" width="92"><IMG style="LEFT: 926px; POSITION: absolute; TOP: 82px" onclick="nombreImagen(this.src)"
+					height="80" alt="" src="imagenes\oveja.jpg" width="92"></P>
+		</center>
+	</body>
+</html>
