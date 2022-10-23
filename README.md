@@ -1,2 +1,1 @@
-# horcado_Imagenes
-# Ahorcado_Imagenes
+# Ahorcado_imagenes
